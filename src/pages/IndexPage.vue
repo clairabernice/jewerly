@@ -9,6 +9,8 @@
       height="400px" 
       class="rounded-borders shadow-2"
       :autoplay="4000"
+      @mouseenter="autoplay = false"
+      @mouseleave="autoplay = 4000"
     >
       <q-carousel-slide 
         v-for="item in listaImagenes" 
@@ -16,14 +18,38 @@
         :name="item.id" 
         :img-src="item.url"
       >
-        <div class="absolute-bottom custom-caption q-pa-md text-center">
+        <div class="absolute-bottom custom-caption q-pt-md q-px-md q-pb-xl text-center">
           <div class="text-h4 text-serif">{{ item.titulo }}</div>
-          <div class="text-subtitle1">{{ item.descripcion }}</div>
+          <div class="text-subtitle1">{{ item.descripcion }}</div>         
         </div>
       </q-carousel-slide>
     </q-carousel>
 
-    <div class="q-py-lg">
+    <div class="q-py-lg" v-if="niceStore.mostrarDiv">
+      <h2 class="text-h4 text-weight-thin text-center text-anthracite q-mb-xl text-uppercase letter-spacing-2">
+        Coleccion Nice
+      </h2>
+
+      <div class="row q-col-gutter-xl justify-start q-pa-md">
+        <div 
+          v-for="item in niceStore.productos" 
+          :key="item.id" 
+          class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
+        >
+          <ProductCard 
+            :item="item" 
+            @add="handleAgregarCarrito" 
+            @whts="consultarWhatsapp"
+          />
+        </div>
+      </div>
+      <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
+        <q-btn fab icon="keyboard_arrow_up" class="bg-gold-metallic" />
+      </q-page-scroller>            
+    </div>
+
+
+    <div class="q-py-lg" v-if="!niceStore.mostrarDiv">
       <h2 class="text-h4 text-weight-thin text-center text-anthracite q-mb-xl text-uppercase letter-spacing-2">
         {{ store.filtroActual === 'Todos' ? 'Nuestra Colección' : store.filtroActual }}
       </h2>
@@ -41,10 +67,9 @@
           />
         </div>
       </div>
-
       <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
         <q-btn fab icon="keyboard_arrow_up" class="bg-gold-metallic" />
-      </q-page-scroller>      
+      </q-page-scroller>            
     </div>
   </q-page>
 </template>
@@ -53,16 +78,20 @@
 import { ref, computed, onMounted } from 'vue';
 import { useQuasar } from 'quasar';
 import { useJoyeriaStore } from 'src/stores/joyeria';
+import { useNiceStore } from 'src/stores/nice-store';
+
 import ProductCard from 'src/components/ProductCard.vue';
 import { api } from 'boot/axios';
 
 const store = useJoyeriaStore();
+const niceStore = useNiceStore();
+
 const $q = useQuasar();
 const slide = ref(1);
 const productos = ref([]);
 
 // Carga de productos desde el JSON
-const cargarConfiguracion = async () => {
+const cargarBRProductos = async () => {
   try {    
     const response = await api.get('/data/data-p.json');
     productos.value = response.data;
@@ -109,11 +138,11 @@ const handleAgregarCarrito = (producto) => {
   
   $q.notify({ 
     message: `${producto.nombre} añadido al carrito`, 
-    color: 'black', // Color elegante
+    color: 'blue', // Color elegante
     textColor: 'gold-1',
     icon: 'shopping_bag',
-    position: 'top-right', 
-    timeout: 1500 
+    position: 'top', 
+    timeout: 1200 
   });
 };
 
@@ -124,7 +153,7 @@ const consultarWhatsapp = (producto) => {
 };
 
 onMounted(async () => {
-  await cargarConfiguracion();
+  await cargarBRProductos();
 });
 </script>
 
@@ -152,5 +181,17 @@ onMounted(async () => {
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
   }
+}
+
+.mi-descripcion {
+  position: absolute;
+  bottom: 50px; /* Lo subimos 50px para saltar los puntos */
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  z-index: 10; /* Asegura que flote sobre los controles */
 }
 </style>

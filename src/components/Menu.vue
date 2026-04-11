@@ -25,7 +25,7 @@
               <q-icon name="local_offer" color="negative" />
             </q-item-section>
             <q-item-section class="text-weight-bold">Promociones</q-item-section>
-          </q-item>
+          </q-item>        
         </q-list>
       </q-scroll-area>
     </q-drawer>

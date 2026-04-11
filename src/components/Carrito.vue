@@ -144,7 +144,7 @@ const handleFinalizarCompra = async () => {
     doc.text(`TOTAL A PAGAR: $${store.totalCarrito.toLocaleString()} MXN`, 15, finalY);
 
     // 6. Guardar y Enviar
-    doc.save(`Pedido_Joyeria.pdf`);
+    //doc.save(`Pedido_Joyeria.pdf`);
     enviarWhatsApp();
 
   } catch (error) {

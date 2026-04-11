@@ -10,8 +10,8 @@
 
         <div class="col-12 col-md-4 text-left ">
           <p class="text-h6">CONTACTO</p>
-          <p>6673 527666</p>          
-          <a href="mailto:info@maestrosjoyeros.com">info.clairabernice@gmail.com</a>
+          <p>6670 00000</p>          
+          <a href="mailto:info@maestrosjoyeros.com">claira.be.r.nice@gmail.com</a>
         </div>
 
         <div class="col-12 col-md-4 text-left ">

@@ -49,7 +49,7 @@ export default defineConfig((ctx) => {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-       publicPath: '/clairabernice/',
+       publicPath: process.env.NODE_ENV === 'production'? '/jewerly/': '/',
       // analyze: true,
       // env: {},
       // rawDefine: {}

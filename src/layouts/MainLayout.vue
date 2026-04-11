@@ -16,10 +16,18 @@
         <q-space />    
         <div class="row no-wrap items-center q-gutter-x-sm">
           <!--<q-btn flat round size="md" color="white" icon="search"></q-btn>-->
+          <q-btn flat round size="md" color="blue" icon="diamond" @click="handleNiceClick">
+            <q-tooltip :delay="200" :hide-delay="0">
+                Productos Nice
+            </q-tooltip>            
+          </q-btn>          
           <q-btn flat round size="md" color="white" icon="shopping_bag" @click="carritoOpen = true">
             <q-badge color="gold-gradient" floating v-if="store.cantidadTotalArticulos > 0">
               {{ store.cantidadTotalArticulos }}
             </q-badge>
+            <q-tooltip :delay="200" :hide-delay="0">
+                Carrito
+            </q-tooltip>              
           </q-btn>
           <q-btn flat dense round icon="menu" color="white" @click="toggleLeftDrawer" class="lt-md" />
         </div>
@@ -37,19 +45,27 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 import { useJoyeriaStore } from 'src/stores/joyeria';
+import { useNiceStore } from 'src/stores/nice-store';
 import Footer from 'src/components/Footer.vue';
 import Menu from 'src/components/Menu.vue';
 import Carrito from 'src/components/Carrito.vue';
 
-const store = useJoyeriaStore()
+const store = useJoyeriaStore();
+const niceStore = useNiceStore();
+
 const leftDrawerOpen = ref(false);
 const carritoOpen = ref(false);
 
 const toggleLeftDrawer = () => {
   leftDrawerOpen.value = !leftDrawerOpen.value
-}
+};
+
+const handleNiceClick = () => {
+  niceStore.toggleDiv();
+  niceStore.cargarProductos(); // Cargamos los datos al hacer clic
+};
 
 // Lista maestra de categorías para evitar repetir código
 const categorias = [

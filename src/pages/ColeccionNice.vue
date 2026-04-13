@@ -1,11 +1,11 @@
 <template>
   <q-page padding class="bg-gallery-white">
-    <div class="q-py-lg">
+    <div class="q-py-lg" >
       <h2 class="text-h4 text-weight-thin text-center text-anthracite q-mb-xl text-uppercase letter-spacing-2">
-        {{ store.filtroActual === 'Todos' ? 'Nuestra Colección' : store.filtroActual }}
-      </h2>
-      <q-btn fab color="gold-metallic" icon="search" @click="showFiltros = true" v-if="!seHaDesplazado"></q-btn> 
-      <div class="row q-col-gutter-xl justify-start q-pa-md">
+        Coleccion Nice
+      </h2>    
+      <q-btn fab color="gold-metallic" icon="search" @click="showFiltros = true" v-if="!seHaDesplazado"></q-btn>                   
+      <div class="row q-col-gutter-xl justify-start q-pa-md">      
         <div 
           v-for="item in productosFiltrados" 
           :key="item.id" 
@@ -16,10 +16,13 @@
             @whts="consultarWhatsapp"
           />
         </div>
-      </div>
-      <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
+        <div ref="scrollObserver" style="height: 10px;"></div>
+      </div>  
+      <q-scroll-observer @scroll="alScroll" />
+      <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">        
         <q-btn fab icon="keyboard_arrow_up" class="bg-gold-metallic" />
-      </q-page-scroller> 
+      </q-page-scroller>   
+      
       <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 80]">
       <q-btn 
         fab 
@@ -31,34 +34,33 @@
           {{ filtrosActivosConteo }}
         </q-badge>
       </q-btn>
-    </q-page-scroller>                  
-    </div>
+    </q-page-scroller>      
+    </div>  
     <Filtros 
       v-model="showFiltros" 
       v-model:filtrosActuales="misFiltros"
-      :productosBase="productosBerNice" 
+      :productosBase="productosNice" 
     />
   </q-page>
 </template>
 
 <script setup>
+
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue';
 import { useQuasar } from 'quasar';
 import { storeToRefs } from 'pinia';
-import { useBeRNiceStore } from 'src/stores/bernice-store';
 
 import ProductCard from 'src/components/ProductCard.vue';
 import Filtros from 'src/components/Filtros.vue';
-
-const $q = useQuasar();
-const store = useBeRNiceStore();
-
+import { useBeRNiceStore } from 'src/stores/bernice-store';
 
 const scrollObserver = ref(null);
 const cantidadAMostrar = ref(50);
-const showFiltros = ref(false);
-const { productosBerNice } = storeToRefs(store);
 
+const store = useBeRNiceStore();
+const $q = useQuasar();
+const showFiltros = ref(false);
+const { productosNice } = storeToRefs(store);
 
 const misFiltros = ref({ 
   nombre: '', 
@@ -90,7 +92,7 @@ const cargarMas = () => {
 
 // ESTA ES LA LÓGICA QUE DEBE ESTAR AQUÍ
 const itemsFiltrados = computed(() => {
-  return productosBerNice.value.filter(item => {
+  return productosNice.value.filter(item => {
     const f = misFiltros.value;
 
     const cumpleNombre = !f.nombre || 
@@ -108,31 +110,9 @@ const itemsFiltrados = computed(() => {
   });
 });
 
-
-/*
-// Lógica de Filtrado (Computed)
-const productosFiltrados = computed(() => {
-  console.log("computed");
-  let lista = productos.value;
-
-  if (store.filtroActual === 'Novedades') {
-    lista = lista.filter(p => p.novedad !== false);
-  } else if (store.filtroActual === 'Promociones') {
-    lista = lista.filter(p => p.promocion === true);
-  } else if (store.filtroActual !== 'Todos') {
-    lista = lista.filter(p => p.categoria === store.filtroActual);
-  }
-  if (store.search) {
-    const s = store.search.toLowerCase();
-    lista = lista.filter(p => p.nombre.toLowerCase().includes(s));
-  }
-  return lista;
-});
-*/
 // ACCIÓN: Agregar al carrito real (Pinia)
 const handleAgregarCarrito = (producto) => {
-  store.agregarAlCarrito(producto);
-  
+  store.agregarAlCarrito(producto);  
   $q.notify({ 
     message: `${producto.n} añadido al carrito`, 
     color: 'blue', // Color elegante
@@ -145,14 +125,14 @@ const handleAgregarCarrito = (producto) => {
 
 // ACCIÓN: Contacto por WhatsApp
 const consultarWhatsapp = (producto) => {
-  const mensaje = encodeURIComponent(`Hola, me interesa información sobre: ${producto.nombre}`);
+  const mensaje = encodeURIComponent(`Hola, me interesa información sobre: ${producto.n}`);
   window.open(`https://wa.me/52667XXXXXXX?text=${mensaje}`, '_blank');
 };
 
 let observer;
 
 onMounted(async() => {
-  await store.getProductosBeRNice();
+  await store.getProductosNice();
   store.paginaActual = "nice";
   observer = new IntersectionObserver((entries) => {
     // Si el centinela entra en pantalla
@@ -174,8 +154,6 @@ watch(misFiltros, () => {
   cantidadAMostrar.value = 50;
   window.scrollTo(0, 0); // Opcional: vuelve arriba al filtrar
 }, { deep: true });
-
-
 </script>
 
 <style lang="scss" scoped>

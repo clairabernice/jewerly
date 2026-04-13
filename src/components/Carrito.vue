@@ -6,31 +6,26 @@
         <q-space />
         <q-btn icon="close" flat round dense v-close-popup />
       </q-card-section>
-
       <q-separator q-mt-sm />
-
-      <q-card-section class="col scroll q-py-none">
+      <q-card-section class="col scroll q-py-none">        
         <q-list v-if="store.carrito.length > 0" separator>
           <q-item v-for="item in store.carrito" :key="item.id" class="q-py-md">
             <q-item-section avatar>
-              <q-img :src="item.imagen" class="rounded-borders" style="width: 60px; height: 60px" />
+              <q-img :src="item.ui" class="rounded-borders" style="width: 60px; height: 60px" />
             </q-item-section>
-
             <q-item-section>
-              <q-item-label class="text-weight-medium">{{ item.nombre }}</q-item-label>
+              <q-item-label class="text-weight-medium">{{ item.n }}</q-item-label>
               <q-item-label caption class="text-gold">
-                ${{ item.precio.toLocaleString() }} MXN
-              </q-item-label>
-              
+                ${{ item.pv?.toLocaleString() }} MXN
+              </q-item-label>              
               <div class="row items-center q-mt-sm">
-                <q-btn outline round size="xs" icon="remove" @click="store.decrementarCantidad(item.id)" />
+                <q-btn outline round size="xs" icon="remove" @click="store.decrementarCantidad(item)" />
                 <span class="q-mx-md">{{ item.cantidad }}</span>
-                <q-btn outline round size="xs" icon="add" @click="store.incrementarCantidad(item.id)" />
+                <q-btn outline round size="xs" icon="add" @click="store.incrementarCantidad(item)" />
               </div>
             </q-item-section>
-
             <q-item-section side>
-              <q-btn flat round color="grey-7" icon="delete" size="sm" @click="store.eliminarDelCarrito(item.id)" />
+              <q-btn flat round color="grey-7" icon="delete" size="sm" @click="store.eliminarDelCarrito(item)" />
             </q-item-section>
           </q-item>
         </q-list>
@@ -47,7 +42,7 @@
       <q-card-section v-if="store.carrito.length > 0" class="q-pa-md">
         <div class="row justify-between text-subtitle1 q-mb-md">
           <span class="text-weight-bold">Total:</span>
-          <span class="text-gold text-weight-bolder">${{ store.totalCarrito.toLocaleString() }} MXN</span>
+          <span class="text-gold text-weight-bolder">${{ store.totalCarrito?.toLocaleString() }} MXN</span>
         </div>
         <q-btn 
           color="black" 
@@ -64,13 +59,13 @@
 <script setup>
 import { computed } from 'vue';
 import { useQuasar } from 'quasar';
-import { useJoyeriaStore } from 'src/stores/joyeria';
 import { jsPDF } from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import logoJoyeria from 'src/assets/logo-claira-nice-transparent.png';
+import { useBeRNiceStore } from 'src/stores/bernice-store';
 
 const $q = useQuasar();
-const store = useJoyeriaStore();
+const store = useBeRNiceStore();
 const props = defineProps(['modelValue']);
 const emit = defineEmits(['update:modelValue']);
 
@@ -122,10 +117,10 @@ const handleFinalizarCompra = async () => {
     // 4. Tabla de Productos
     const columnas = ['Producto', 'Precio Unit.', 'Cant.', 'Subtotal'];
     const filas = store.carrito.map(item => [
-      item.nombre,
-      `$${item.precio.toLocaleString()}`,
+      item.n,
+      `$${item.pv.toLocaleString()}`,
       item.cantidad,
-      `$${(item.precio * item.cantidad).toLocaleString()}`
+      `$${(item.pv * item.cantidad).toLocaleString()}`
     ]);
 
     autoTable(doc, {

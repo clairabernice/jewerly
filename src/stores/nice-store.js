@@ -5,7 +5,8 @@ export const useNiceStore = defineStore('nice', {
   state: () => ({
     mostrarDiv: false,
     productos: [],
-    cargando: false
+    cargando: false,
+    filtrosAbiertos: false
   }),
   
   actions: {
@@ -13,6 +14,7 @@ export const useNiceStore = defineStore('nice', {
       this.mostrarDiv = !this.mostrarDiv;
     },
     async cargarProductos() {
+      console.log(this.productos.length);
       if (this.productos.length > 0) return; // No recargar si ya existen      
       this.cargando = true;
       try {

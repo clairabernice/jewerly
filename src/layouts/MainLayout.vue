@@ -6,19 +6,45 @@
           <q-img src="~assets/logo-claira-nice-horizontal-transparent.png" style="width: 250px; height: 80px" fit="contain" />
         </q-btn>         
         <q-space />
-        <div class="row justify-center q-py-sm gt-sm categories-bar">
-          <q-btn v-for="cat in categorias" :key="cat.nombre" 
+        <div class="row justify-center q-py-sm gt-sm">
+          <q-btn v-for="cat in categorias.filter(c => c.dd == false)" :key="cat.nombre" 
             flat no-caps :label="cat.nombre.toUpperCase()" 
             @click="store.setFiltro(cat.nombre)"
+            to="/"
             :class="[store.filtroActual === cat.nombre ? 'text-gold active-link' : 'text-grey-4 hover-gold']" 
-          />
-        </div>
+          />  
+          <q-btn-dropdown
+            flat
+            no-caps
+            label="JOYERIA"
+            class="jewelry-dropdown"
+            :class="store.filtroActual !== 'todos' ? 'text-gold' : 'text-grey-4'"
+            dropdown-icon="expand_more">
+            <q-list class="bg-dark text-white shadow-24" style="min-width: 220px; border: 1px solid #333;">          
+              <q-item 
+                v-for="cat in categorias.filter(c => c.dd == true)" 
+                :key="cat.nombre"
+                clickable 
+                v-close-popup 
+                @click="store.setFiltro(cat.nombre)"
+                to="/"
+                :active="store.filtroActual === cat.nombre"
+                class="q-py-md">
+                <q-item-section class="text-weight-light">
+                  {{ cat.nombre.toUpperCase() }}
+                </q-item-section>                
+                <q-item-section side v-if="store.filtroActual === cat.nombre">
+                  <q-icon name="check" color="gold" size="xs" />
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-btn-dropdown>
+        </div>         
         <q-space />    
-        <div class="row no-wrap items-center q-gutter-x-sm">
-          <!--<q-btn flat round size="md" color="white" icon="search"></q-btn>-->
-          <q-btn flat round size="md" color="blue" icon="diamond" @click="handleNiceClick">
+        <div class="row no-wrap items-center q-gutter-x-sm">  
+          <q-btn flat round size="md" color="gold-metallic" icon="diamond" to="/coleccion_nice" >
             <q-tooltip :delay="200" :hide-delay="0">
-                Productos Nice
+                Coleccion Nice
             </q-tooltip>            
           </q-btn>          
           <q-btn flat round size="md" color="white" icon="shopping_bag" @click="carritoOpen = true">
@@ -37,6 +63,7 @@
     <Menu v-model="leftDrawerOpen" :categorias="categorias" @catselected="seleccionarCategoria"></Menu>
     <q-page-container>
       <q-page class="q-pa-md">
+        <CarruselImagenes />
         <router-view />
       </q-page>      
     </q-page-container>
@@ -46,15 +73,14 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useJoyeriaStore } from 'src/stores/joyeria';
-import { useNiceStore } from 'src/stores/nice-store';
-import Footer from 'src/components/Footer.vue';
+import { useBeRNiceStore } from 'src/stores/bernice-store';
+
 import Menu from 'src/components/Menu.vue';
+import CarruselImagenes from 'src/components/CarruselImagenes.vue';
+import Footer from 'src/components/Footer.vue';
 import Carrito from 'src/components/Carrito.vue';
 
-const store = useJoyeriaStore();
-const niceStore = useNiceStore();
-
+const store = useBeRNiceStore();
 const leftDrawerOpen = ref(false);
 const carritoOpen = ref(false);
 
@@ -62,21 +88,16 @@ const toggleLeftDrawer = () => {
   leftDrawerOpen.value = !leftDrawerOpen.value
 };
 
-const handleNiceClick = () => {
-  niceStore.toggleDiv();
-  niceStore.cargarProductos(); // Cargamos los datos al hacer clic
-};
-
 // Lista maestra de categorías para evitar repetir código
 const categorias = [
-  { nombre: 'Todos', icono: 'apps' },
-  { nombre: 'Novedades', icono: 'auto_awesome' },
-  { nombre: 'Collares', icono: 'straighten' }, // O 'straighten' si no tienes mdi
-  { nombre: 'Aretes', icono: 'blur_on' },
-  { nombre: 'Anillos', icono: 'panorama_fish_eye' },
-  { nombre: 'Pulseras', icono: 'watch' },
-  { nombre: 'Piercing', icono: 'adjust' },
-  { nombre: 'Promociones', icono: 'adjust' }
+  { nombre: 'Todos', icono: 'apps', dd: false },
+  { nombre: 'Novedades', icono: 'auto_awesome', dd: false },
+  { nombre: 'Collares', icono: 'straighten', dd: true }, // O 'straighten' si no tienes mdi
+  { nombre: 'Aretes', icono: 'blur_on', dd: true },
+  { nombre: 'Anillos', icono: 'panorama_fish_eye', dd: true },
+  { nombre: 'Pulseras', icono: 'watch', dd: true },
+  { nombre: 'Piercing', icono: 'adjust', dd: true },  
+  { nombre: 'Promociones', icono: 'local_offer', dd: false },  
 ]
 
 const seleccionarCategoria = (nombre) => {
@@ -114,4 +135,27 @@ const seleccionarCategoria = (nombre) => {
 .q-item {
   min-height: 25px;
 }
+
+/*
+.text-gold {
+  color: #d4af37 !important; 
+}
+
+.categories-dropdown {
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+
+.q-list {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.hover-gold:hover {
+  color: #d4af37 !important;
+  background: rgba(212, 175, 55, 0.1);
+}
+*/
+
 </style>

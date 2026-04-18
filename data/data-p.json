@@ -1,10 +1,272 @@
 [
-  { "cn": 1, "n": "COLLAR", "pv": 899, "ct": "Collares", "novedad": false, "promocion": false, "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/79199-O-60-SP.jpg?v=1775067535&width=1000&height=1000&crop=center" },
-  { "cn": 2, "n": "COLLAR", "pv": 899, "ct": "Collares", "novedad": true, "promocion": true, "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/79199-O-60-SP.jpg?v=1775067535&width=1000&height=1000&crop=center" },
-  { "cn": 3, "n": "ARETES", "pv": 899, "ct": "Aretes", "novedad": true, "promocion": false, "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/79199-O-60-SP.jpg?v=1775067535&width=1000&height=1000&crop=center" },
-  { "cn": 4, "n": "ARETES", "pv": 899, "ct": "Anillos", "novedad": true, "promocion": false, "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/79199-O-60-SP.jpg?v=1775067535&width=1000&height=1000&crop=center" },
-  { "cn": 5, "n": "ANILLOS", "pv": 899, "ct": "Anillos", "novedad": true, "promocion": false, "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/79199-O-60-SP.jpg?v=1775067535&width=1000&height=1000&crop=center" },
-  { "cn": 6, "n": "PULSERAS", "pv": 899, "ct": "Pulseras", "novedad": true, "promocion": false, "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/79199-O-60-SP.jpg?v=1775067535&width=1000&height=1000&crop=center" },
-  { "cn": 7, "n": "PULSERAS", "pv": 899, "ct": "Pulseras", "novedad": true, "promocion": false, "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/79199-O-60-SP.jpg?v=1775067535&width=1000&height=1000&crop=center" },
-  { "cn": 8, "n": "PIERCING", "pv": 899, "ct": "Piercing", "novedad": true, "promocion": false, "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/79199-O-60-SP.jpg?v=1775067535&width=1000&height=1000&crop=center" }
+  {
+    "q": 1,
+    "cn": 925096,
+    "n": "Aretes de poste con piedra de cristal",
+    "pn": 249,
+    "ct": "Aretes",
+    "novedad": false,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309177-O-00-CS.jpg?v=1761250681&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309177-O-00-CS.jpg?v=1761250681&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309177-O-00-CS.jpg?v=1761250681&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309177-O-00-CS.jpg?v=1761250681&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309177-O-00-CS.jpg?v=1761250681&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309177-O-00-CS.jpg?v=1761250681&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925506,
+    "n": "Pulsera ajustable de corazones con baño de oro",
+    "pn": 349,
+    "ct": "Pulseras",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/65999-O-21-SP.jpg?v=1761249289&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/65999-O-21-SP.jpg?v=1761249289&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/65999-O-21-SP.jpg?v=1761249289&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/65999-O-21-SP.jpg?v=1761249289&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/65999-O-21-SP.jpg?v=1761249289&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/65999-O-21-SP.jpg?v=1761249289&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925099,
+    "n": "Pulsera de cadena Figaro con baño de oro",
+    "pn": 499,
+    "ct": "Pulseras",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13466-O-18-SP.jpg?v=1756161870&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13466-O-18-SP.jpg?v=1756161870&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13466-O-18-SP.jpg?v=1756161870&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13466-O-18-SP.jpg?v=1756161870&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13466-O-18-SP.jpg?v=1756161870&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13466-O-18-SP.jpg?v=1756161870&width=1200&height=1200&crop=center 1200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13466-O-18-SP.jpg?v=1756161870&width=1400&height=1400&crop=center 1400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13466-O-18-SP.jpg?v=1756161870&width=1600&height=1600&crop=center 1600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13466-O-18-SP.jpg?v=1756161870&width=1800&height=1800&crop=center 1800w"
+  },
+  {
+    "q": 2,
+    "cn": 126122,
+    "n": "Aretes en baño de oro con forma de corazón y aplicaciones de piedras",
+    "pn": 199,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309417-O-00-CS.jpg?v=1766764824&width=200&height=200&crop=center 1x, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309417-O-00-CS.jpg?v=1766764824&width=400&height=400&crop=center 2x, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309417-O-00-CS.jpg?v=1766764824&width=600&height=600&crop=center 3x"
+  },
+  {
+    "q": 1,
+    "cn": 425476,
+    "n": "Aretes de poste con baño de oro y colgante de piedra roja",
+    "pn": 219,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925567,
+    "n": "Pulsera ajustable con diseño de infinito",
+    "pn": 219,
+    "ct": "Pulseras",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308279-O-00-SI_5283501a-e6be-4610-8694-c184b4e44777.jpg?v=1759343685&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 2363,
+    "n": "Aretes geométricos en baño de oro, con su diseño moderno y minimalista",
+    "pn": 219,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/302458-O-00-SP.jpg?v=1756221632&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/302458-O-00-SP.jpg?v=1756221632&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/302458-O-00-SP.jpg?v=1756221632&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/302458-O-00-SP.jpg?v=1756221632&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/302458-O-00-SP.jpg?v=1756221632&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/302458-O-00-SP.jpg?v=1756221632&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925734,
+    "n": "Pulsera de cadena figaro bañada en oro",
+    "pn": 599,
+    "ct": "Pulseras",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13494-O-21-SP.jpg?v=1756162387&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13494-O-21-SP.jpg?v=1756162387&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13494-O-21-SP.jpg?v=1756162387&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13494-O-21-SP.jpg?v=1756162387&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13494-O-21-SP.jpg?v=1756162387&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13494-O-21-SP.jpg?v=1756162387&width=1200&height=1200&crop=center 1200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13494-O-21-SP.jpg?v=1756162387&width=1400&height=1400&crop=center 1400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13494-O-21-SP.jpg?v=1756162387&width=1600&height=1600&crop=center 1600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/13494-O-21-SP.jpg?v=1756162387&width=1800&height=1800&crop=center 1800w"
+  },
+  {
+    "q": 1,
+    "cn": 925655,
+    "n": "Aretes Huggie con acabado acanalado",
+    "pn": 229,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309270-O-00-SP.jpg?v=1761249560&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309270-O-00-SP.jpg?v=1761249560&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309270-O-00-SP.jpg?v=1761249560&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309270-O-00-SP.jpg?v=1761249560&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309270-O-00-SP.jpg?v=1761249560&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309270-O-00-SP.jpg?v=1761249560&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925094,
+    "n": "Aretes arracada rectangular con baño de oro y piedras multicolores",
+    "pn": 299,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309250-O-21-MT.jpg?v=1761250673&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309250-O-21-MT.jpg?v=1761250673&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309250-O-21-MT.jpg?v=1761250673&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309250-O-21-MT.jpg?v=1761250673&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309250-O-21-MT.jpg?v=1761250673&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309250-O-21-MT.jpg?v=1761250673&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 226132,
+    "n": "Aretes en baño de oro con dije candado diseño moderno",
+    "pn": 219,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309446-O-00-SP.jpg?v=1769533638&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309446-O-00-SP.jpg?v=1769533638&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309446-O-00-SP.jpg?v=1769533638&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309446-O-00-SP.jpg?v=1769533638&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309446-O-00-SP.jpg?v=1769533638&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309446-O-00-SP.jpg?v=1769533638&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925095,
+    "n": "Collar con dije de cristal en baño de oro.",
+    "pn": 349,
+    "ct": "Collares",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/701523-O-52-CS.jpg?v=1761250674&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/701523-O-52-CS.jpg?v=1761250674&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/701523-O-52-CS.jpg?v=1761250674&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/701523-O-52-CS.jpg?v=1761250674&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/701523-O-52-CS.jpg?v=1761250674&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/701523-O-52-CS.jpg?v=1761250674&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925514,
+    "n": "Aretes Huggie de corazón con Diamonice",
+    "pn": 299,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309272-O-00-CS.jpg?v=1761249274&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309272-O-00-CS.jpg?v=1761249274&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309272-O-00-CS.jpg?v=1761249274&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309272-O-00-CS.jpg?v=1761249274&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309272-O-00-CS.jpg?v=1761249274&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309272-O-00-CS.jpg?v=1761249274&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925251,
+    "n": "Aretes botón con baño de oro y cristales",
+    "pn": 319,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307665-O-00-CS.jpg?v=1756162323&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307665-O-00-CS.jpg?v=1756162323&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307665-O-00-CS.jpg?v=1756162323&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307665-O-00-CS.jpg?v=1756162323&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307665-O-00-CS.jpg?v=1756162323&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307665-O-00-CS.jpg?v=1756162323&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925624,
+    "n": "Aretes arracada con textura tipo cestería",
+    "pn": 329,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309267-O-18-SP.jpg?v=1761249571&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309267-O-18-SP.jpg?v=1761249571&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309267-O-18-SP.jpg?v=1761249571&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309267-O-18-SP.jpg?v=1761249571&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309267-O-18-SP.jpg?v=1761249571&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309267-O-18-SP.jpg?v=1761249571&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 2,
+    "cn": 925132,
+    "n": "Aretes huggie con diseño de corazones y Diamonice.",
+    "pn": 249,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309200-O-00-CS.jpg?v=1761250778&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309200-O-00-CS.jpg?v=1761250778&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309200-O-00-CS.jpg?v=1761250778&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309200-O-00-CS.jpg?v=1761250778&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309200-O-00-CS.jpg?v=1761250778&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309200-O-00-CS.jpg?v=1761250778&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925226,
+    "n": "Aretes de botón brillantes con baño de oro.",
+    "pn": 189,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/39882-O-08-SP.jpg?v=1756132853&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/39882-O-08-SP.jpg?v=1756132853&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/39882-O-08-SP.jpg?v=1756132853&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/39882-O-08-SP.jpg?v=1756132853&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/39882-O-08-SP.jpg?v=1756132853&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/39882-O-08-SP.jpg?v=1756132853&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 2,
+    "cn": 925434,
+    "n": "Aretes medianos de baño de oro con cristales rosas.",
+    "pn": 349,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309037-O-00-RO.jpg?v=1761249112&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309037-O-00-RO.jpg?v=1761249112&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309037-O-00-RO.jpg?v=1761249112&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309037-O-00-RO.jpg?v=1761249112&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309037-O-00-RO.jpg?v=1761249112&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309037-O-00-RO.jpg?v=1761249112&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 2,
+    "cn": 925063,
+    "n": "Aretes arracada/huggie con baño de oro y gemas Diamonice",
+    "pn": 289,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307270-O-00-CS.jpg?v=1756163842&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307270-O-00-CS.jpg?v=1756163842&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307270-O-00-CS.jpg?v=1756163842&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307270-O-00-CS.jpg?v=1756163842&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307270-O-00-CS.jpg?v=1756163842&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/307270-O-00-CS.jpg?v=1756163842&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 126065,
+    "n": "Aretes en baño de oro con dijes de corazón colgantes y detalles con toque brillante",
+    "pn": 349,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309402-O-00-CS.jpg?v=1766764588&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309402-O-00-CS.jpg?v=1766764588&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309402-O-00-CS.jpg?v=1766764588&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309402-O-00-CS.jpg?v=1766764588&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309402-O-00-CS.jpg?v=1766764588&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309402-O-00-CS.jpg?v=1766764588&width=1200&height=1200&crop=center 1200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309402-O-00-CS.jpg?v=1766764588&width=1400&height=1400&crop=center 1400w"
+  },
+  {
+    "q": 1,
+    "cn": 925365,
+    "n": "Pulsera fina de cadena con baño de oro y cristales",
+    "pn": 529,
+    "ct": "Pulseras",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/66114-O-20-CS.jpg?v=1761248896&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/66114-O-20-CS.jpg?v=1761248896&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/66114-O-20-CS.jpg?v=1761248896&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/66114-O-20-CS.jpg?v=1761248896&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/66114-O-20-CS.jpg?v=1761248896&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/66114-O-20-CS.jpg?v=1761248896&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925501,
+    "n": "Aretes Huggie Corazón con Diamonice",
+    "pn": 319,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309271-O-00-CS.jpg?v=1761249312&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309271-O-00-CS.jpg?v=1761249312&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309271-O-00-CS.jpg?v=1761249312&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309271-O-00-CS.jpg?v=1761249312&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309271-O-00-CS.jpg?v=1761249312&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309271-O-00-CS.jpg?v=1761249312&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925636,
+    "n": "Aretes Huggie con textura tipo malla",
+    "pn": 319,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309274-O-20-SP.jpg?v=1761249557&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309274-O-20-SP.jpg?v=1761249557&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309274-O-20-SP.jpg?v=1761249557&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309274-O-20-SP.jpg?v=1761249557&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309274-O-20-SP.jpg?v=1761249557&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309274-O-20-SP.jpg?v=1761249557&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925351,
+    "n": "Aretes de poste con diseño de estrella y perla.",
+    "pn": 239,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309293-O-00-CR.jpg?v=1761248871&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309293-O-00-CR.jpg?v=1761248871&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309293-O-00-CR.jpg?v=1761248871&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309293-O-00-CR.jpg?v=1761248871&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309293-O-00-CR.jpg?v=1761248871&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309293-O-00-CR.jpg?v=1761248871&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925284,
+    "n": "Aretes arracada trenzada con baño de oro",
+    "pn": 349,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309263-O-24-SP.jpg?v=1761248757&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309263-O-24-SP.jpg?v=1761248757&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309263-O-24-SP.jpg?v=1761248757&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309263-O-24-SP.jpg?v=1761248757&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309263-O-24-SP.jpg?v=1761248757&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/309263-O-24-SP.jpg?v=1761248757&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 1,
+    "cn": 925486,
+    "n": "Aretes tipo arracada con baño de rodio para mujer",
+    "pn": 319,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308680-BB-19-SP1.jpg?v=1761249277&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308680-BB-19-SP1.jpg?v=1761249277&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308680-BB-19-SP1.jpg?v=1761249277&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308680-BB-19-SP1.jpg?v=1761249277&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308680-BB-19-SP1.jpg?v=1761249277&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/308680-BB-19-SP1.jpg?v=1761249277&width=1200&height=1200&crop=center 1200w"
+  },
+  {
+    "q": 2,
+    "cn": 1025054,
+    "n": "Aretes en baño de oro esferas caladas diseño moderno",
+    "pn": 219,
+    "ct": "Aretes",
+    "novedad": true,
+    "promocion": false,
+    "ui": "https://cdn.shopify.com/s/files/1/0664/9053/1977/files/301139-O-06-SP_34ea963b-46ed-44fd-ae01-01c5f4b2ff9d.jpg?v=1763676787&width=200&height=200&crop=center 200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/301139-O-06-SP_34ea963b-46ed-44fd-ae01-01c5f4b2ff9d.jpg?v=1763676787&width=400&height=400&crop=center 400w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/301139-O-06-SP_34ea963b-46ed-44fd-ae01-01c5f4b2ff9d.jpg?v=1763676787&width=600&height=600&crop=center 600w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/301139-O-06-SP_34ea963b-46ed-44fd-ae01-01c5f4b2ff9d.jpg?v=1763676787&width=800&height=800&crop=center 800w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/301139-O-06-SP_34ea963b-46ed-44fd-ae01-01c5f4b2ff9d.jpg?v=1763676787&width=1000&height=1000&crop=center 1000w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/301139-O-06-SP_34ea963b-46ed-44fd-ae01-01c5f4b2ff9d.jpg?v=1763676787&width=1200&height=1200&crop=center 1200w, https://cdn.shopify.com/s/files/1/0664/9053/1977/files/301139-O-06-SP_34ea963b-46ed-44fd-ae01-01c5f4b2ff9d.jpg?v=1763676787&width=1400&height=1400&crop=center 1400w"
+  }
 ]

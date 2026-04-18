@@ -13,7 +13,7 @@ export const useBeRNiceStore = defineStore('bernice', {
 
   getters: {
     totalCarrito: (state) => {
-      return state.carrito.reduce((total, item) => total + (item.pv * item.cantidad), 0);
+      return state.carrito.reduce((total, item) => total + (item.pn * item.cantidad), 0);
     },
     cantidadTotalArticulos: (state) => {
       return state.carrito.reduce((total, item) => total + item.cantidad, 0);
@@ -53,8 +53,7 @@ export const useBeRNiceStore = defineStore('bernice', {
       this.carrito = this.carrito.filter(i => i.cn !== prod.cn);
     },  
 
-    async getProductosNice() {
-      console.log("getProductosNice", this.productosNice.length);
+    async getProductosNice() {      
       if (this.productosNice.length > 0) return; // No recargar si ya existen      
       this.cargando = true;
       try {
@@ -67,13 +66,12 @@ export const useBeRNiceStore = defineStore('bernice', {
       }
     },  
 
-    async getProductosBeRNice() {
-      console.log("getProductosBeRNice", this.productosBerNice.length);
+    async getProductosBeRNice() {      
       if (this.productosBerNice.length > 0) return; // No recargar si ya existen      
       this.cargando = true;
       try {
        const response = await api.get('/data/data-p.json');
-        this.productosBerNice = response.data;
+        this.productosBerNice = response.data;        
       } catch (error) {
         console.error('Error al leer el JSON:', error);
       } finally {

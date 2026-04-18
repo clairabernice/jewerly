@@ -10,7 +10,7 @@
 
         <div class="col-12 col-md-4 text-left ">
           <p class="text-h6">CONTACTO</p>
-          <p>6670 00000</p>          
+          <p>+526673527666</p>          
           <a href="mailto:info@maestrosjoyeros.com">claira.be.r.nice@gmail.com</a>
         </div>
 

@@ -1,13 +1,14 @@
 <template>
     <q-card class="product-card bg-grey-4" bordered>
         <q-img :srcset="props.item.ui" :ratio="1">
-            <q-badge v-if="props.item.novedad" floating class="q-ma-sm bg-gold-metallic">NUEVO</q-badge>
+            <q-badge v-if="props.item?.q == 0" floating color="negative" class="q-ma-sm">AGOTADO</q-badge>
+            <q-badge v-else="props.item.novedad" floating class="q-ma-sm bg-gold-metallic">NUEVO</q-badge>
             <q-badge v-if="props.item.promocion" floating color="negative" class="q-ma-sm">OFERTA</q-badge>
         </q-img>
         <q-card-section class="text-center q-pb-none">
             <div class="product-name text-serif text-anthracite">{{ props.item.n }}</div>
             <div class="product-price text-h6 text-gold text-weight-bolder">
-            ${{ props.item.pv.toLocaleString() }} MXN
+            ${{ props.item.pn.toLocaleString() }} MXN
             </div>
         </q-card-section>
         <q-card-actions align="center" class="q-pb-md q-pt-sm">

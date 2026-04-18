@@ -16,7 +16,7 @@
             <q-item-section>
               <q-item-label class="text-weight-medium">{{ item.n }}</q-item-label>
               <q-item-label caption class="text-gold">
-                ${{ item.pv?.toLocaleString() }} MXN
+                ${{ item.pn?.toLocaleString() }} MXN
               </q-item-label>              
               <div class="row items-center q-mt-sm">
                 <q-btn outline round size="xs" icon="remove" @click="store.decrementarCantidad(item)" />
@@ -64,6 +64,7 @@ import autoTable from 'jspdf-autotable';
 import logoJoyeria from 'src/assets/logo-claira-nice-transparent.png';
 import { useBeRNiceStore } from 'src/stores/bernice-store';
 
+
 const $q = useQuasar();
 const store = useBeRNiceStore();
 const props = defineProps(['modelValue']);
@@ -98,29 +99,30 @@ const handleFinalizarCompra = async () => {
   $q.loading.show({ message: 'Generando pedido...' }); // Feedback visual
 
   try {
+    
     const doc = new jsPDF();
     
     // 1. Obtener el logo (puedes usar la ruta de tu logo local o web)
     // Ejemplo: require('assets/logo-negro.png') o una URL directa
-    const logoBase64 = await getBase64ImageFromURL(logoJoyeria);
+   // const logoBase64 = await getBase64ImageFromURL(logoJoyeria);
 
     // 2. Insertar Logo (x: 15, y: 10, ancho: 25, alto: 25)
-    doc.addImage(logoBase64, 'PNG', 15, 10, 50, 25);
+    ///doc.addImage(logoBase64, 'PNG', 15, 10, 50, 25);
 
     
     doc.setFontSize(10);
     doc.setTextColor(100);
 
-    /*doc.text(`Pedido ID: ${Date.now()}`, 15, 40);*/
+    doc.text(`Pedido ID: ${Date.now()}`, 15, 40);
     doc.text(`Fecha: ${new Date().toLocaleString()}`, 150, 40);
 
     // 4. Tabla de Productos
     const columnas = ['Producto', 'Precio Unit.', 'Cant.', 'Subtotal'];
     const filas = store.carrito.map(item => [
       item.n,
-      `$${item.pv.toLocaleString()}`,
+      `$${item.pn.toLocaleString()}`,
       item.cantidad,
-      `$${(item.pv * item.cantidad).toLocaleString()}`
+      `$${(item.pn * item.cantidad).toLocaleString()}`
     ]);
 
     autoTable(doc, {
@@ -143,7 +145,7 @@ const handleFinalizarCompra = async () => {
     enviarWhatsApp();
 
   } catch (error) {
-    console.error('Error al generar PDF:', error);
+
     $q.notify({ color: 'negative', message: 'No se pudo cargar el logo para el PDF' });
   } finally {
     $q.loading.hide();
@@ -151,19 +153,23 @@ const handleFinalizarCompra = async () => {
 };
 
 const enviarWhatsApp = () => {
-  const telefono = '526671234567'; // Reemplaza con tu número real
-  let mensaje = `*NUEVO PEDIDO`;
-  mensaje += `--------------------------%0A`;
-  
-  store.carrito.forEach(item => {
-    mensaje += `*${item.nombre}*%0A`;
-    mensaje += `Cant: ${item.cantidad} - $${(item.precio * item.cantidad).toLocaleString()}%0A%0A`;
+  const telefono = '526673527666'; // Reemplaza con tu número real
+  let mensaje = `NUEVO PEDIDO`;
+  mensaje += `--------------------------------%0A`;
+
+  /*console.log("enviarWhatsApp", store.carrito);*/
+
+  store.carrito.forEach(item => {    
+    mensaje += `Codigo:${item.cn}%0A`;
+    mensaje += `Producto:${item.n}%0A`;
+    mensaje += `Tipo:${item.is ?? 'Nice'}%0A`;
+    mensaje += `Precio:$${item.pn} MXN %0A`;
+    mensaje += `Cantidad: ${item.cantidad} = $${(item.pn * item.cantidad).toLocaleString()} MXN %0A%0A`;
   });
-
-  mensaje += `--------------------------%0A`;
+  mensaje += `-----------------------------%0A`;
   mensaje += `*TOTAL: $${store.totalCarrito.toLocaleString()} MXN*%0A%0A`;
-  mensaje += `_He generado mi PDF de pedido. Por favor, confírmenme para proceder._`;
 
+  /*console.log(mensaje);*/
   window.open(`https://wa.me/${telefono}?text=${mensaje}`, '_blank');
 };
 </script>

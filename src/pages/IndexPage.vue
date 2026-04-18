@@ -2,7 +2,7 @@
   <q-page padding class="bg-gallery-white">
     <div class="q-py-lg">
       <h2 class="text-h4 text-weight-thin text-center text-anthracite q-mb-xl text-uppercase letter-spacing-2">
-        {{ store.filtroActual === 'Todos' ? 'Nuestra Colección' : store.filtroActual }}
+        {{ store.filtroActual === 'Todos' ? 'Nuestra Colección (Be R Nice)' : store.filtroActual }}
       </h2>
       <q-btn fab color="gold-metallic" icon="search" @click="showFiltros = true" v-if="!seHaDesplazado"></q-btn> 
       <div class="row q-col-gutter-xl justify-start q-pa-md">
@@ -66,7 +66,7 @@ const misFiltros = ref({
   categoria: '', 
   precio: {
     min: 99,
-    max: 2999
+    max: 5999
   } 
 });
 
@@ -78,7 +78,7 @@ const alScroll = (info) => {
   seHaDesplazado.value = info.position.top > 400;
 };
 
-const productosFiltrados = computed(() => {
+const productosFiltrados = computed(() => { 
   return itemsFiltrados.value.slice(0, cantidadAMostrar.value);
 });
 
@@ -101,8 +101,8 @@ const itemsFiltrados = computed(() => {
 
     const cumpleCategoria = !f.categoria || 
       item.ct === f.categoria;
-
-    const cumplePrecio = item.pv >= f.precio.min && item.pv <= f.precio.max;
+  
+    const cumplePrecio = item.pn >= f.precio.min && item.pn <= f.precio.max;
 
     return cumpleNombre && cumpleCodigo && cumpleCategoria && cumplePrecio;
   });
@@ -146,14 +146,14 @@ const handleAgregarCarrito = (producto) => {
 // ACCIÓN: Contacto por WhatsApp
 const consultarWhatsapp = (producto) => {
   const mensaje = encodeURIComponent(`Hola, me interesa información sobre: ${producto.nombre}`);
-  window.open(`https://wa.me/52667XXXXXXX?text=${mensaje}`, '_blank');
+  window.open(`https://wa.me/526673527666?text=${mensaje}`, '_blank');
 };
 
 let observer;
 
 onMounted(async() => {
   await store.getProductosBeRNice();
-  store.paginaActual = "nice";
+  store.paginaActual = "bernice";
   observer = new IntersectionObserver((entries) => {
     // Si el centinela entra en pantalla
     if (entries[0].isIntersecting) {

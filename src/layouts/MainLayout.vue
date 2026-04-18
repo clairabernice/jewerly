@@ -6,13 +6,14 @@
           <q-img src="~assets/logo-claira-nice-horizontal-transparent.png" style="width: 250px; height: 80px" fit="contain" />
         </q-btn>         
         <q-space />
+        <!--
         <div class="row justify-center q-py-sm gt-sm">
           <q-btn v-for="cat in categorias.filter(c => c.dd == false)" :key="cat.nombre" 
             flat no-caps :label="cat.nombre.toUpperCase()" 
             @click="store.setFiltro(cat.nombre)"
             to="/"
             :class="[store.filtroActual === cat.nombre ? 'text-gold active-link' : 'text-grey-4 hover-gold']" 
-          />  
+          />            
           <q-btn-dropdown
             flat
             no-caps
@@ -39,7 +40,9 @@
               </q-item>
             </q-list>
           </q-btn-dropdown>
-        </div>         
+        
+        </div>  
+      -->       
         <q-space />    
         <div class="row no-wrap items-center q-gutter-x-sm">  
           <q-btn flat round size="md" color="gold-metallic" icon="diamond" to="/coleccion_nice" >
@@ -55,12 +58,16 @@
                 Carrito
             </q-tooltip>              
           </q-btn>
+          <!--
           <q-btn flat dense round icon="menu" color="white" @click="toggleLeftDrawer" class="lt-md" />
+        -->
         </div>
       </q-toolbar>
     </q-header>
     <Carrito v-model="carritoOpen" />
+    <!--
     <Menu v-model="leftDrawerOpen" :categorias="categorias" @catselected="seleccionarCategoria"></Menu>
+  -->
     <q-page-container>
       <q-page class="q-pa-md">
         <CarruselImagenes />
@@ -94,9 +101,9 @@ const categorias = [
   { nombre: 'Novedades', icono: 'auto_awesome', dd: false },
   { nombre: 'Collares', icono: 'straighten', dd: true }, // O 'straighten' si no tienes mdi
   { nombre: 'Aretes', icono: 'blur_on', dd: true },
-  { nombre: 'Anillos', icono: 'panorama_fish_eye', dd: true },
+ /* { nombre: 'Anillos', icono: 'panorama_fish_eye', dd: true },*/
   { nombre: 'Pulseras', icono: 'watch', dd: true },
-  { nombre: 'Piercing', icono: 'adjust', dd: true },  
+  /*{ nombre: 'Piercing', icono: 'adjust', dd: true }, */ 
   { nombre: 'Promociones', icono: 'local_offer', dd: false },  
 ]
 

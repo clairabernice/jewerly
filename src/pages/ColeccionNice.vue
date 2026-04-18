@@ -104,7 +104,7 @@ const itemsFiltrados = computed(() => {
     const cumpleCategoria = !f.categoria || 
       item.ct === f.categoria;
 
-    const cumplePrecio = item.pv >= f.precio.min && item.pv <= f.precio.max;
+    const cumplePrecio = item.pn >= f.precio.min && item.pn <= f.precio.max;
 
     return cumpleNombre && cumpleCodigo && cumpleCategoria && cumplePrecio;
   });
@@ -126,7 +126,7 @@ const handleAgregarCarrito = (producto) => {
 // ACCIÓN: Contacto por WhatsApp
 const consultarWhatsapp = (producto) => {
   const mensaje = encodeURIComponent(`Hola, me interesa información sobre: ${producto.n}`);
-  window.open(`https://wa.me/52667XXXXXXX?text=${mensaje}`, '_blank');
+  window.open(`https://wa.me/526673527666?text=${mensaje}`, '_blank');
 };
 
 let observer;

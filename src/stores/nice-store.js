@@ -13,8 +13,7 @@ export const useNiceStore = defineStore('nice', {
     toggleDiv() {
       this.mostrarDiv = !this.mostrarDiv;
     },
-    async cargarProductos() {
-      console.log(this.productos.length);
+    async cargarProductos() {      
       if (this.productos.length > 0) return; // No recargar si ya existen      
       this.cargando = true;
       try {
